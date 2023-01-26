@@ -36,10 +36,11 @@ org.gradle.jvmargs=-Xmx1536M
 android.enableR8=true
 android.useAndroidX=true
 android.enableJetifier=true
-
-### Device Permission:
-For Andriod:
 ```
+
+## Device Permission:
+
+### For Andriod:
 
 Open the AndroidManifest.xml file and add the required device permissions to the file.
 
@@ -55,7 +56,7 @@ Open the AndroidManifest.xml file and add the required device permissions to the
 <!-- The Agora SDK requires Bluetooth permissions in case users are using Bluetooth devices.-->
 <uses-permission android:name="android.permission.BLUETOOTH" />
 
-For Ios:
+### For Ios:
 
 Open the info. plist and add:
 
