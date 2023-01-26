@@ -40,7 +40,7 @@ android.enableJetifier=true
 
 ## Device Permission:
 
-### For Andriod:
+### For Android:
 
 Open the AndroidManifest.xml file and add the required device permissions to the file.
 
@@ -56,7 +56,7 @@ Open the AndroidManifest.xml file and add the required device permissions to the
 <!-- The Agora SDK requires Bluetooth permissions in case users are using Bluetooth devices.-->
 <uses-permission android:name="android.permission.BLUETOOTH" />
 
-### For Ios:
+### For IOS:
 
 Open the info. plist and add:
 
