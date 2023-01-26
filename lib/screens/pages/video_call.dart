@@ -1,11 +1,11 @@
 import 'dart:async';
-
 import 'package:agora_rtc_engine/rtc_engine.dart';
 import 'package:agora_rtc_engine/rtc_local_view.dart' as RtcLocalView;
 import 'package:agora_rtc_engine/rtc_remote_view.dart' as RtcRemoteView;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/settings.dart';
+import 'package:flutter_video_call_demo/theme.dart';
+import '../../utils/settings.dart';
 
 class VideoCall extends StatefulWidget {
   final String channelName;
@@ -52,9 +52,10 @@ class _VideoCallState extends State<VideoCall> {
 
     await _initAgoraRtcEngine();
     _addAgoraEventHandlers();
+    // ignore: deprecated_member_use
     await _engine.enableWebSdkInteroperability(true);
     VideoEncoderConfiguration configuration = VideoEncoderConfiguration();
-    configuration.dimensions = VideoDimensions(1920, 1080);
+    configuration.dimensions = VideoDimensions(width: 1920, height: 1080);
     await _engine.setVideoEncoderConfiguration(configuration);
     await _engine.joinChannel(Token, widget.channelName, null, 0);
   }
@@ -107,6 +108,7 @@ class _VideoCallState extends State<VideoCall> {
     if (widget.role == ClientRole.Broadcaster) {
       list.add(RtcLocalView.SurfaceView());
     }
+    // ignore: missing_required_param
     _users.forEach((int uid) => list.add(RtcRemoteView.SurfaceView(uid: uid)));
     return list;
   }
@@ -196,7 +198,7 @@ class _VideoCallState extends State<VideoCall> {
           RawMaterialButton(
             onPressed: _onSwitchCamera,
             child: Icon(
-              Icons.switch_camera,
+              CupertinoIcons.arrow_2_circlepath,
               color: Colors.blueAccent,
               size: 20.0,
             ),
@@ -278,8 +280,9 @@ class _VideoCallState extends State<VideoCall> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Video Call Demo'),
+        title: Text(widget.channelName),
         centerTitle: true,
+        backgroundColor: AppColor.kDarkBackgroundPrimaryColor,
       ),
       backgroundColor: Colors.black,
       body: Center(
