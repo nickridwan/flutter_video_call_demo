@@ -1,7 +1,7 @@
 Setup:
-1. Clone the Agora-Flutter-Quickstart. The Agora Flutter Quickstart is open-sourced and available on GitHub.
+1. Clone the [Agora-Flutter-Quickstart](https://github.com/AgoraIO-Community/Agora-Flutter-Quickstart). The Agora Flutter Quickstart is open-sourced and available on GitHub.
 
-2. Create an account on Agora.
+2. Create an account on [Agora](https://sso.agora.io/login/?type=email).
 
 3. After completing the registration process, you will be redirected to the dashboard page.
 
@@ -64,11 +64,10 @@ How to implement code in dart file :
 
 You need to implement it in your code respectively:
 
-``
+```
 const APP_ID = Your App_ID
-
 const Token = Your Token
-``
+```
 You will add your app id from the agora dashboard and copy the App ID to your clipboard. Yow will generate a temporary token from the agora console page, and in other options, you will use the 
 
 primary certificate key to copy and paste on the token.
