@@ -16,9 +16,10 @@ Implementation:
 Add dependencies to pubspec — yaml file.
 
 dependencies:
-
+```
 agora_rtc_engine: ^3.1.3
 permission_handler: ^5.0.1
+```
 ## Step 2: Import
 ```
 import 'package:agora_rtc_engine/rtc_engine.dart';
