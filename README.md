@@ -10,8 +10,9 @@ Setup:
 5. Copy the App ID to your clipboard.
 
 
-Implementation:
-## Step 1: Add the dependencies
+##Implementation:
+
+### Step 1: Add the dependencies
 
 Add dependencies to pubspec — yaml file.
 
@@ -20,14 +21,14 @@ dependencies:
 agora_rtc_engine: ^3.1.3
 permission_handler: ^5.0.1
 ```
-## Step 2: Import
+### Step 2: Import
 ```
 import 'package:agora_rtc_engine/rtc_engine.dart';
 import 'package:permission_handler/permission_handler.dart';
 ```
-## Step 3: Run flutter packages get in the root directory of your app.
+### Step 3: Run flutter packages get in the root directory of your app.
 
-## Step 4: Enable AndriodX
+### Step 4: Enable AndriodX
 
 Add this to your gradle.properties file:
 ```
@@ -35,7 +36,8 @@ org.gradle.jvmargs=-Xmx1536M
 android.enableR8=true
 android.useAndroidX=true
 android.enableJetifier=true
-Device Permission:
+
+### Device Permission:
 For Andriod:
 ```
 
@@ -61,7 +63,7 @@ Privacy — Microphone Usage Description, and add a note in the Value column.
 
 Privacy — Camera Usage Description, and add a note in the Value column.
 
-How to implement code in dart file :
+## How to implement code in dart file :
 
 You need to implement it in your code respectively:
 
