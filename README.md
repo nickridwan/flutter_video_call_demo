@@ -64,10 +64,10 @@ How to implement code in dart file :
 
 You need to implement it in your code respectively:
 
+``
 const APP_ID = Your App_ID
-
 const Token = Your Token
-
+``
 You will add your app id from the agora dashboard and copy the App ID to your clipboard. Yow will generate a temporary token from the agora console page, and in other options, you will use the 
 
 primary certificate key to copy and paste on the token.
